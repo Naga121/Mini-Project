@@ -1,0 +1,15 @@
+marquee{
+    margin-top: 1rem;
+    color: red;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.container .col-6 .name{
+    font-size: 2rem ;
+    color: rgb(3, 3, 3);
+    font-weight: bold;
+}
+.author{
+    color: darkred;
+}

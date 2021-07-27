@@ -1,0 +1,63 @@
+<marquee behavior="scroll" direction="left">Important Update: In Light of the Latest Government Guidelines on
+    COVID,deliveries of Non-Essential products will be delayed.</marquee>
+
+<div *ngFor="let record of productData">
+    <div class="container mt-3" >
+        <div class="row px-5">
+            <div class="col-lg-2 px-5 mx-2">
+                <img src="http://localhost:8090/{{record.image}}" width="150" alt="image">
+            </div>
+            <div class="col-lg-6 px-5">
+                <div class="row px-5">
+                    <div class="bread-crumb pt-1 ">
+                        <a href="https://www.bookswagon.com">Home</a> &gt;
+                        <a href="https://www.bookswagon.com/fiction-books">Fiction</a> &gt;
+                        <a href="#">Religious &amp; spiritual fiction</a> &gt; The Song of Achilles
+                    </div>
+                    <div class="col-lg-5 w-100">
+                        <dd class="name font-weight-bold pt-3 h2">{{record.name}} <small class="h6">{{record.highlights}}</small></dd>
+                        <dd>
+                            <span class="font-weight-bold text-danger h2">{{record.price }}</span>
+                            (<del> {{record.price }} </del>)
+                        </dd>
+                        <dd>
+                            <h1 class="font-weight-bold pt-3"><span class="text-danger text-sm"> Category </span> :
+                                {{record.color}}</h1>
+                        </dd>
+                        <dd>
+                            <button
+                                style="background: whitesmoke; color: rgb(231, 143, 143);padding: 8px;border: 1px solid rgb(184, 181, 181);border-radius: 20px;">
+                                Non-Returnable
+                            </button>
+                        </dd>
+                        <dd class="button-group pt-3">
+                            <button type="submit" class="btn btn-danger  w-40 active px-5 m-2" >
+                                Buy Now
+                            </button>
+                            <button type="submit" class="btn btn-dark w-40 active px-5 m-2">
+                                Add Cart
+                            </button>
+                        </dd>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row px-5">
+            <h4 style="background: whitesmoke;padding: 0.5rem;font-size: 1.2rem;line-height: 20px;">About the Book
+                <span style="margin-left: 35rem; font-size:1.0rem;font-weight:initial ;color: rgb(252, 126, 126);"> Hide
+                    Details
+                </span>
+            </h4>
+        </div>
+        <div class="row px-5">
+            <div class="col-12 px-5" style="font-style: oblique;font-weight: bolder;">
+                {{record.description}}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Child Comment Component -->
+
+<app-comments></app-comments>
